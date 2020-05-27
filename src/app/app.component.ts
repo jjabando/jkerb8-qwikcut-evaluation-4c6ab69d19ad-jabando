@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Video } from './models/Video';
 
 @Component({
   selector: 'app-root',
@@ -7,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent {
   title = 'QwikCut-Evaluation';
+  currVideo: Video;
+  suffix: string;
   clips: Array<any> = [
     {
       clipnumber: 1,
@@ -65,5 +68,31 @@ export class AppComponent {
       distance: 9
     }
   ]
+  constructor(){
+    this.changeVideo(0);
+  }
+  changeVideo(ind:number){
 
+    this.currVideo = this.clips[ind];
+    switch(this.currVideo.down) {
+      case 1:
+        this.suffix = 'st';
+        break;
+      case 2:
+        this.suffix = 'nd';
+        break;
+      case 3:
+        this.suffix = 'rd';
+        break;
+      default:
+        this.suffix = 'th'
+    }
+  }
+  onEnd(){
+    if(this.currVideo.clipnumber < 8){
+      this.changeVideo(this.currVideo.clipnumber);
+      var video = document.getElementById('vid');
+      video.setAttribute('autoplay', '');
+    }
+  }
 }

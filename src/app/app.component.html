@@ -1,8 +1,11 @@
 <!--The content below is only a placeholder and should be replaced.-->
 <div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="https://qwikbox.s3.amazonaws.com/qwikcut-store-listing-logo.png">
+  <app-header></app-header>
+  <h2>
+    Clip #{{currVideo.clipnumber}}: {{currVideo.personnel}}
+  </h2>
+  <p>{{currVideo.down}}{{suffix}}&{{currVideo.distance}}</p>
+  <video id="vid" width="320" height="240" controls (ended)="onEnd()" src={{currVideo.url}}>
+  </video>
 </div>
 
