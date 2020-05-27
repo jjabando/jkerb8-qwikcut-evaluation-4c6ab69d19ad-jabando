@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { Video } from './models/Video';
+import { HeaderComponent } from './components/layout/header/header.component';
 
 @Component({
   selector: 'app-root',
@@ -7,9 +8,9 @@ import { Video } from './models/Video';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  @ViewChild(HeaderComponent) headerComponent : HeaderComponent;
   title = 'QwikCut-Evaluation';
   currVideo: Video;
-  suffix: string;
   clips: Array<any> = [
     {
       clipnumber: 1,
@@ -69,28 +70,16 @@ export class AppComponent {
     }
   ]
   constructor(){
-    this.changeVideo(0);
+    this.currVideo = this.clips[0];
   }
   changeVideo(ind:number){
-
     this.currVideo = this.clips[ind];
-    switch(this.currVideo.down) {
-      case 1:
-        this.suffix = 'st';
-        break;
-      case 2:
-        this.suffix = 'nd';
-        break;
-      case 3:
-        this.suffix = 'rd';
-        break;
-      default:
-        this.suffix = 'th'
-    }
   }
   onEnd(){
     if(this.currVideo.clipnumber < 8){
-      this.changeVideo(this.currVideo.clipnumber);
+      //update header button and 'side'
+      this.headerComponent.selectVid(this.currVideo.clipnumber);
+      
       var video = document.getElementById('vid');
       video.setAttribute('autoplay', '');
     }

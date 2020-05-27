@@ -2,5 +2,22 @@
     background: #333;
     color: #fff;
     text-align: center;
-    padding: 1px;
+    padding: 2px;
+}
+img{
+    margin: 0;
+}
+h1{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+input{
+    border-color: green;
+}
+#selected{
+    color: rgb(153, 255, 0);
+    background-color: red;
+}
+#activeside{
+    color: yellow;
 }
