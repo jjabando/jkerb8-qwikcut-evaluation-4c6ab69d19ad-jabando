@@ -76,12 +76,22 @@ export class AppComponent {
     this.currVideo = this.clips[ind];
   }
   onEnd(){
-    if(this.currVideo.clipnumber < 8){
+    var video = document.getElementById('vid');
+    var apbtn = document.getElementsByClassName('ap').item(0);
+    if(this.currVideo.clipnumber < 8 && apbtn.getAttribute('id') === 'selected'){
       //update header button and 'side'
       this.headerComponent.selectVid(this.currVideo.clipnumber);
       
       var video = document.getElementById('vid');
       video.setAttribute('autoplay', '');
+    }
+  }
+  toggleAutoplay(){
+    var apbtn = document.getElementsByClassName('ap').item(0);
+    if(apbtn.getAttribute('id') === 'selected'){
+      apbtn.setAttribute('id', '');
+    }else{
+      apbtn.setAttribute('id', 'selected');
     }
   }
 }

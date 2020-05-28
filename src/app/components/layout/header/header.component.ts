@@ -10,7 +10,7 @@ export class HeaderComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    var btn = document.getElementsByTagName('input').item(0);
+    var btn = document.getElementsByClassName('hbtn').item(0);
     btn.id = 'selected';
     var side = document.getElementsByClassName('side').item(0);
     side.id = 'active';
@@ -18,7 +18,7 @@ export class HeaderComponent implements OnInit {
   selectVid(ind:number){
     
     //set color to indicate current video
-    var btns = document.getElementsByTagName('input');
+    var btns = document.getElementsByClassName('hbtn');
     for(var i = 0; i < btns.length; i++){
       btns.item(i).id = '';
     }
