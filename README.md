@@ -7,7 +7,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 2. change working directory to application root directory
 3. 'npm install' to get dependencies
 4. 'npm start'
-5. point browser to 'http://localhost:4200/';
+5. point browser to 'http://localhost:4200/'
 
 ## Development server
 
