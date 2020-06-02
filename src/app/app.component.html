@@ -3,6 +3,6 @@
   <app-header (setVideo)="changeVideo($event)"></app-header>
   <video id="vid" width="600" controls (ended)="onEnd()" src={{currVideo.url}}>
   </video><br>
-  <input class="ap" id="selected" type="button" value="Autoplay" (click)="toggleAutoplay()">
+  <button mat-flat-button id='' (click)="toggleAutoplay()">Autoplay</button>
 </div>
 

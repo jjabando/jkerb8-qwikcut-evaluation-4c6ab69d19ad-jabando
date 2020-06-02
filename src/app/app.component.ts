@@ -77,8 +77,8 @@ export class AppComponent {
   }
   onEnd(){
     var video = document.getElementById('vid');
-    var apbtn = document.getElementsByClassName('ap').item(0);
-    if(this.currVideo.clipnumber < 8 && apbtn.getAttribute('id') === 'selected'){
+    var apbtn = document.getElementsByTagName('button').item(0);
+    if(this.currVideo.clipnumber < 8 && apbtn.getAttribute('id') === ''){
       //update header button and 'side'
       this.headerComponent.selectVid(this.currVideo.clipnumber);
       
@@ -87,11 +87,11 @@ export class AppComponent {
     }
   }
   toggleAutoplay(){
-    var apbtn = document.getElementsByClassName('ap').item(0);
-    if(apbtn.getAttribute('id') === 'selected'){
+    var apbtn = document.getElementsByTagName('button').item(0);
+    if(apbtn.getAttribute('id') === 'apoff'){
       apbtn.setAttribute('id', '');
     }else{
-      apbtn.setAttribute('id', 'selected');
+      apbtn.setAttribute('id', 'apoff');
     }
   }
 }

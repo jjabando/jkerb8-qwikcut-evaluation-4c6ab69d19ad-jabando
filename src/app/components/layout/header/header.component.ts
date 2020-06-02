@@ -12,8 +12,8 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
     var btn = document.getElementsByClassName('hbtn').item(0);
     btn.id = 'selected';
-    var side = document.getElementsByClassName('side').item(0);
-    side.id = 'activeside';
+    var startside = document.getElementsByClassName('side').item(0);
+    startside.id = 'activeoff';
   }
   selectVid(ind:number){
     
@@ -27,11 +27,11 @@ export class HeaderComponent implements OnInit {
     //set color to indicate the active side
     var side = document.getElementsByClassName('side');
     if(ind < btns.length/2){
-      side.item(0).id = 'activeside';
+      side.item(0).id = 'activeoff';
       side.item(1).id = '';
     }else{
       side.item(0).id = '';
-      side.item(1).id = 'activeside';
+      side.item(1).id = 'activedef';
     }
 
     this.setVideo.emit(ind);

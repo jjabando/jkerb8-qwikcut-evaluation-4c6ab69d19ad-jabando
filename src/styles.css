@@ -1,8 +1,4 @@
 /* You can add global styles to this file, and also import other style files */
-#selected{
-    color: rgb(153, 255, 0);
-    background-color: red;
-}
 html, body {
     margin:10;
     padding:0;
@@ -11,9 +7,4 @@ html, body {
 h1 {
     margin:0;
     color: lime;
-}
-input{
-    background-color: aqua;
-    width: 70px;
-    height: 25px;
 }

@@ -10,8 +10,16 @@ h1{
     margin-top: 0;
     margin-bottom: 0;
 }
-#activeside{
-    color: yellow;
+input{
+    background-color: orange;
+    width: 70px;
+    height: 25px;
+}
+#activeoff{
+    color: rgb(255, 0, 0);
+}
+#activedef{
+    color: rgb(0, 26, 255);
 }
 #selected{
     color: rgb(204, 0, 255);
