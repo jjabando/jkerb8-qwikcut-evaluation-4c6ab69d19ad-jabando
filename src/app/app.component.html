@@ -1,7 +1,7 @@
 <!--The content below is only a placeholder and should be replaced.-->
 <div style="text-align:center">
   <app-header (setVideo)="changeVideo($event)"></app-header>
-  <video id="vid" width="320" height="240" controls (ended)="onEnd()" src={{currVideo.url}}>
+  <video id="vid" width="600" controls (ended)="onEnd()" src={{currVideo.url}}>
   </video><br>
   <input class="ap" id="selected" type="button" value="Autoplay" (click)="toggleAutoplay()">
 </div>

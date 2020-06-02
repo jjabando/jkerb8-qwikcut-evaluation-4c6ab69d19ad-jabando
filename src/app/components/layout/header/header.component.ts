@@ -13,7 +13,7 @@ export class HeaderComponent implements OnInit {
     var btn = document.getElementsByClassName('hbtn').item(0);
     btn.id = 'selected';
     var side = document.getElementsByClassName('side').item(0);
-    side.id = 'active';
+    side.id = 'activeside';
   }
   selectVid(ind:number){
     

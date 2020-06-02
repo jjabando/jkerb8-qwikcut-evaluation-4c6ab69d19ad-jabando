@@ -1,5 +1,4 @@
 .header{
-    background: #333;
     color: #fff;
     text-align: center;
     padding: 2px;
@@ -11,9 +10,10 @@ h1{
     margin-top: 0;
     margin-bottom: 0;
 }
-input{
-    border-color: green;
-}
 #activeside{
     color: yellow;
+}
+#selected{
+    color: rgb(204, 0, 255);
+    background-color: rgb(84, 214, 95);
 }

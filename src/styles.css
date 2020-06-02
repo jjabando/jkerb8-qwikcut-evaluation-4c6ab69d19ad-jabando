@@ -3,3 +3,17 @@
     color: rgb(153, 255, 0);
     background-color: red;
 }
+html, body {
+    margin:10;
+    padding:0;
+    background-color: rgb(141, 141, 141);
+}
+h1 {
+    margin:0;
+    color: lime;
+}
+input{
+    background-color: aqua;
+    width: 70px;
+    height: 25px;
+}
